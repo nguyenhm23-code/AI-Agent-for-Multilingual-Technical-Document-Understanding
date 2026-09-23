@@ -413,5 +413,185 @@
     "answers": [
       "31"
     ]
+  },
+  {
+    "id": "6001",
+    "question": "Which SQL constraint enforces a relationship between two tables?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p008.png",
+    "answers": ["FOREIGN KEY", "foreign key constraint"]
+  },
+  {
+    "id": "6002",
+    "question": "In a SQL LIKE pattern, what does the % wildcard match?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p010.png",
+    "answers": ["A sequence of zero or more characters", "zero or more characters"]
+  },
+  {
+    "id": "6003",
+    "question": "Which operator checks whether a column contains a NULL value?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p030.png",
+    "answers": ["IS NULL"]
+  },
+  {
+    "id": "6004",
+    "question": "Which SQL statement creates a new table?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p036.png",
+    "answers": ["CREATE TABLE"]
+  },
+  {
+    "id": "6005",
+    "question": "Which SQL statement adds a new column to an existing table?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p041.png",
+    "answers": ["ALTER TABLE ... ADD", "ALTER TABLE ADD"]
+  },
+  {
+    "id": "6006",
+    "question": "Which SQL statement inserts a new row into a table?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p054.png",
+    "answers": ["INSERT INTO"]
+  },
+  {
+    "id": "6007",
+    "question": "What happens if an UPDATE statement has no WHERE clause?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p061.png",
+    "answers": ["All rows are updated", "Every row in the table is updated"]
+  },
+  {
+    "id": "6008",
+    "question": "What happens if a DELETE statement has no WHERE clause?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p064.png",
+    "answers": ["All rows are deleted", "Every row in the table is deleted"]
+  },
+  {
+    "id": "6009",
+    "question": "What does DISTINCT do in a SELECT query?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p068.png",
+    "answers": ["Returns only unique rows", "Removes duplicate rows from the result"]
+  },
+  {
+    "id": "6010",
+    "question": "Which ORDER BY keyword sorts results in descending order?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p076.png",
+    "answers": ["DESC"]
+  },
+  {
+    "id": "6011",
+    "question": "Which set operator returns rows common to both query results?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p106.png",
+    "answers": ["INTERSECT"]
+  },
+  {
+    "id": "6012",
+    "question": "Which SQL operator combines query results while retaining duplicate rows?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p107.png",
+    "answers": ["UNION ALL"]
+  },
+  {
+    "id": "6013",
+    "question": "Which set operator returns rows in the first query result but not in the second?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p113.png",
+    "answers": ["EXCEPT"]
+  },
+  {
+    "id": "6014",
+    "question": "When does EXISTS return TRUE for a subquery?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p127.png",
+    "answers": ["When the subquery returns one or more rows", "When the subquery is not empty"]
+  },
+  {
+    "id": "6015",
+    "question": "What makes a subquery correlated?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p138.png",
+    "answers": ["It depends on the outer query", "The inner query depends on values from the outer query"]
+  },
+  {
+    "id": "6016",
+    "question": "What does a CROSS JOIN produce?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p144.png",
+    "answers": ["The Cartesian product", "Every combination of rows from the two tables"]
+  },
+  {
+    "id": "6017",
+    "question": "Which rows does a LEFT JOIN return?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p154.png",
+    "answers": ["All rows from the left table and matching rows from the right table"]
+  },
+  {
+    "id": "6018",
+    "question": "Which clause groups rows by the values of one or more columns?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p170.png",
+    "answers": ["GROUP BY"]
+  },
+  {
+    "id": "6019",
+    "question": "What does COUNT(expression) count when some expression values are NULL?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p174.png",
+    "answers": ["Non-NULL values", "Rows where the expression is not NULL"]
+  },
+  {
+    "id": "6020",
+    "question": "Which clause filters groups after GROUP BY?",
+    "question_type": ["layout"],
+    "docId": null,
+    "ucsf_document_id": null,
+    "image_path": "images/chapter6_p185.png",
+    "answers": ["HAVING"]
   }
 ]
