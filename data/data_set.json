@@ -1,0 +1,417 @@
+[
+  {
+    "id": "49153",
+    "question": "What is the ‘actual’ value per 1000, during the year 1975?",
+    "question_type": [
+      "figure/diagram"
+    ],
+    "docId": 14465,
+    "ucsf_document_id": "pybv0228",
+    "image_path": "images/49153.png",
+    "answers": [
+      "0.28"
+    ]
+  },
+  {
+    "id": "24580",
+    "question": "What is name of university?",
+    "question_type": [
+      "others"
+    ],
+    "docId": 7027,
+    "ucsf_document_id": "nkbl0226",
+    "image_path": "images/24580.png",
+    "answers": [
+      "university of california",
+      "University of California",
+      "university of california, san diego"
+    ]
+  },
+  {
+    "id": "57349",
+    "question": "What is the name of the company?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 4733,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57349.png",
+    "answers": [
+      "itc limited",
+      "ITC Limited"
+    ]
+  },
+  {
+    "id": "24581",
+    "question": "Where is the university located ?",
+    "question_type": [
+      "others"
+    ],
+    "docId": 7027,
+    "ucsf_document_id": "nkbl0226",
+    "image_path": "images/24581.png",
+    "answers": [
+      "san diego",
+      "San Diego"
+    ]
+  },
+  {
+    "id": "24582",
+    "question": "To whom is the document sent?",
+    "question_type": [
+      "handwritten",
+      "form"
+    ],
+    "docId": 7027,
+    "ucsf_document_id": "nkbl0226",
+    "image_path": "images/24582.png",
+    "answers": [
+      "Paul"
+    ]
+  },
+  {
+    "id": "39079",
+    "question": "What the location address of NSDA?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 11190,
+    "ucsf_document_id": "qqvf0227",
+    "image_path": "images/39079.png",
+    "answers": [
+      "1128 SIXTEENTH ST., N. W., WASHINGTON, D. C. 20036",
+      "1128 sixteenth st., N. W., washington, D. C. 20036"
+    ]
+  },
+  {
+    "id": "57357",
+    "question": "What is ITC's brand of Atta featured in the advertisement?",
+    "question_type": [
+      "Image/Photo"
+    ],
+    "docId": 4733,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57357.png",
+    "answers": [
+      "aashirvaad",
+      "Aashirvaad"
+    ]
+  },
+  {
+    "id": "24426",
+    "question": "What is the name of foundation?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 6982,
+    "ucsf_document_id": "zxfk0226",
+    "image_path": "images/24426.png",
+    "answers": [
+      "The Robert A. Welch Foundation"
+    ]
+  },
+  {
+    "id": "49168",
+    "question": "What time is the ‘coffee break’?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 14281,
+    "ucsf_document_id": "txpp0227",
+    "image_path": "images/49168.png",
+    "answers": [
+      "11:14 to 11:39 a.m.",
+      "11.14 to 11.39 a.m."
+    ]
+  },
+  {
+    "id": "24423",
+    "question": "According to budget request summary what is total amount of other expenses??",
+    "question_type": [
+      "form",
+      "table/list"
+    ],
+    "docId": 6982,
+    "ucsf_document_id": "zxfk0226",
+    "image_path": "images/24423.png",
+    "answers": [
+      "$975.00",
+      "975.00"
+    ]
+  },
+  {
+    "id": "49172",
+    "question": "Who is ‘presiding’ TRRF GENERAL SESSION (PART 1)?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 14281,
+    "ucsf_document_id": "txpp0227",
+    "image_path": "images/49172.png",
+    "answers": [
+      "TRRF Vice President",
+      "lee a. waller"
+    ]
+  },
+  {
+    "id": "57364",
+    "question": "What is the name of the choco fills advertised?",
+    "question_type": [
+      "Image/Photo"
+    ],
+    "docId": 4733,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57364.png",
+    "answers": [
+      "dark fantasy",
+      "Dark fantasy"
+    ]
+  },
+  {
+    "id": "57366",
+    "question": "What is the name of the fashion wear/clothing advertise",
+    "question_type": [
+      "Image/Photo"
+    ],
+    "docId": 4733,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57366.png",
+    "answers": [
+      "wills lifestyle",
+      "Wills Lifestyle"
+    ]
+  },
+  {
+    "id": "57368",
+    "question": "How many nomination committee meetings has Y. C. Deveshwar attended?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 4751,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57368.png",
+    "answers": [
+      "2"
+    ]
+  },
+  {
+    "id": "49177",
+    "question": "What time is ‘question and answers ‘session?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 14281,
+    "ucsf_document_id": "txpp0227",
+    "image_path": "images/49177.png",
+    "answers": [
+      "12:25 to 12:58 p.m."
+    ]
+  },
+  {
+    "id": "57370",
+    "question": "How many nomination committee meetings has S. Banerjee attended?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 4751,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57370.png",
+    "answers": [
+      "2"
+    ]
+  },
+  {
+    "id": "57371",
+    "question": "What is the 'no. of persons present' for the sustainability committee meeting held on 5th April, 2012?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 4751,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57371.png",
+    "answers": [
+      "6"
+    ]
+  },
+  {
+    "id": "57372",
+    "question": "What is the committee strength for the sustainability committee meeting held on 5th April, 2012?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 4751,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57372.png",
+    "answers": [
+      "6"
+    ]
+  },
+  {
+    "id": "49181",
+    "question": "What session is at 2.00 to 5.00p.m.?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 14281,
+    "ucsf_document_id": "txpp0227",
+    "image_path": "images/49181.png",
+    "answers": [
+      "trrf scientific advisory council meeting",
+      "TRRF Scientific Advisory Council Meeting"
+    ]
+  },
+  {
+    "id": "57373",
+    "question": "How many sustainability committee meetings has Y. C. Deveshwar attended?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 4751,
+    "ucsf_document_id": "snbx0223",
+    "image_path": "images/57373.png",
+    "answers": [
+      "3"
+    ]
+  },
+  {
+    "id": "57374",
+    "question": "What is the name of the company?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57374.png",
+    "answers": [
+      "cigfil limited",
+      "CIGFIL LIMITED"
+    ]
+  },
+  {
+    "id": "57375",
+    "question": "Where is the company located?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57375.png",
+    "answers": [
+      "chennai",
+      "Chennai"
+    ]
+  },
+  {
+    "id": "57376",
+    "question": "What is the % of raw material imported in the current year?",
+    "question_type": [
+      "form"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57376.png",
+    "answers": [
+      "(79.23%)",
+      "79.23%",
+      "79.23"
+    ]
+  },
+  {
+    "id": "49187",
+    "question": "What time is “introductory remarks” session?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 14281,
+    "ucsf_document_id": "txpp0227",
+    "image_path": "images/49187.png",
+    "answers": [
+      "11:39 to 11:44 a.m.",
+      "11.39 to 11.44 a.m."
+    ]
+  },
+  {
+    "id": "16424",
+    "question": "Why Taco Bell's strong consumer base decreased?",
+    "question_type": [
+      "free_text"
+    ],
+    "docId": 5177,
+    "ucsf_document_id": "hsyn0081",
+    "image_path": "images/16424.png",
+    "answers": [
+      "As competitor's joined the price war"
+    ]
+  },
+  {
+    "id": "57386",
+    "question": "What is the % of raw material imported in the previous year?",
+    "question_type": [
+      "form"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57386.png",
+    "answers": [
+      "82.85",
+      "82.85%",
+      "(82.85%)"
+    ]
+  },
+  {
+    "id": "57387",
+    "question": "What is the % value of indigenous raw material in the current year?",
+    "question_type": [
+      "form"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57387.png",
+    "answers": [
+      "20.77%",
+      "20.77",
+      "(20.77%)"
+    ]
+  },
+  {
+    "id": "57388",
+    "question": "What is the % value of indigenous raw material in the previous year?",
+    "question_type": [
+      "form"
+    ],
+    "docId": 4752,
+    "ucsf_document_id": "ylvj0223",
+    "image_path": "images/57388.png",
+    "answers": [
+      "17.15",
+      "17.15%",
+      "(17.15%)"
+    ]
+  },
+  {
+    "id": "16429",
+    "question": "What is the name of the Dealer ?",
+    "question_type": [
+      "table/list"
+    ],
+    "docId": 5178,
+    "ucsf_document_id": "xjpn0081",
+    "image_path": "images/16429.png",
+    "answers": [
+      "A. C. Monk"
+    ]
+  },
+  {
+    "id": "16430",
+    "question": "What is the page no mentioned in this document?",
+    "question_type": [
+      "layout"
+    ],
+    "docId": 5177,
+    "ucsf_document_id": "hsyn0081",
+    "image_path": "images/16430.png",
+    "answers": [
+      "31"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# DENSO images / large files
+data/images/
+data/*.zip
+
+# Outputs
+outputs/
+
+# IDE
+.vscode/
+.idea/
