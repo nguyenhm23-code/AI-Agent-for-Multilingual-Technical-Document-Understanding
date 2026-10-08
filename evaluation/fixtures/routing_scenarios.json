@@ -1,0 +1,17 @@
+{
+  "review_status": "scripted_requirement_review",
+  "purpose": "Routing and refusal regression scenarios; no corpus-level accuracy claim.",
+  "questions": [
+    {"id": "T01_EN", "question": "What is the rated voltage of Orion?", "acceptable_routes": ["baseline"], "requirements": ["rated voltage"], "expected_router_model_calls": 0},
+    {"id": "T01_VI", "question": "Điện áp định mức của Orion là bao nhiêu?", "acceptable_routes": ["baseline"], "requirements": ["điện áp định mức"], "expected_router_model_calls": 0},
+    {"id": "T02", "question": "Please carefully read the available source documents and provide the rated voltage of Orion, including its unit and source page so I can verify the specification myself.", "acceptable_routes": ["baseline"], "requirements": ["rated voltage"], "expected_router_model_calls": 0},
+    {"id": "T03", "question": "Find Orion's manufacturer, then its budget.", "acceptable_routes": ["hierarchical"], "requirements": ["Orion manufacturer", "manufacturer budget"], "dependency": true},
+    {"id": "T04", "question": "List Orion voltage and weight.", "acceptable_routes": ["baseline", "hierarchical"], "requirements": ["voltage", "weight"], "must_cover_all_requirements": true},
+    {"id": "T05", "question": "Calculate the sum of Alpha and Beta budgets.", "acceptable_routes": ["hierarchical"], "requirements": ["Alpha budget", "Beta budget", "sum"]},
+    {"id": "T07", "question": "Read Orion voltage from the diagram.", "acceptable_routes": ["baseline"], "needs_visual": true},
+    {"id": "T08", "question": "Read Alpha and Beta costs from the chart and calculate their difference.", "acceptable_routes": ["hierarchical"], "needs_visual": true},
+    {"id": "T11", "question": "What is the voltage of MissingDevice?", "acceptable_routes": ["baseline", "hierarchical"], "acceptable_statuses_without_evidence": ["abstain"], "must_not_invent_value": true},
+    {"id": "T12", "question": "Orion voltage?", "filters": {"source_relative": "orion.pdf", "page_number": 1}, "acceptable_routes": ["baseline"], "must_preserve_scope": true},
+    {"id": "T28", "question": "What value is in the unreadable chart?", "needs_visual": true, "acceptable_statuses_for_unreadable_visual": ["abstain", "clarification"], "must_not_invent_value": true}
+  ]
+}

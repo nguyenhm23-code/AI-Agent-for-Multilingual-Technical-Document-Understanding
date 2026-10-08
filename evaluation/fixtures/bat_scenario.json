@@ -1,0 +1,27 @@
+{
+  "review_status": "draft_from_existing_ocr",
+  "limitations": "Scenario fixtures are not human-reviewed answer correctness gold. Confirm document evidence and numeric results separately.",
+  "questions": [
+    {
+      "id": "BAT_NO_TRANSFER",
+      "question": "Nếu cả hai dự án Project Jessie (Nam Phi & vùng đệm) và Project Dawn (Nigeria) đều hoàn thành 100% mục tiêu cắt giảm sản lượng thuốc lá bất hợp pháp đã đề ra, thì tổng lợi nhuận gộp (Gross Margin) tạo ra cho BAT khu vực AME là bao nhiêu? Sau khi trừ tổng ngân sách chi phí dự kiến (Latest Estimate) của hai dự án, lợi nhuận ròng ước tính là bao nhiêu?",
+      "acceptable_routes": ["hierarchical"],
+      "acceptable_statuses_without_sourced_transfer": ["clarification", "abstain"],
+      "requirements": ["Jessie target volume", "Dawn target volume", "BAT AME gross margin rate", "Jessie Latest Estimate cost", "Dawn Latest Estimate cost", "sourced illicit reduction to BAT sales relationship"],
+      "forbidden_inference": "Completing 100% of a reduction target is not 100% transfer to BAT sales."
+    },
+    {
+      "id": "BAT_EXPLICIT_TRANSFER",
+      "question": "Trong kịch bản này, 100% sản lượng thuốc lá bất hợp pháp được cắt giảm chuyển thành doanh số của BAT. Nếu Project Jessie và Project Dawn hoàn thành toàn bộ mục tiêu cắt giảm đã đề ra, tính tổng Gross Margin của BAT AME và lợi nhuận sau khi trừ Latest Estimate của hai dự án.",
+      "acceptable_routes": ["hierarchical"],
+      "expected_condition": {
+        "origin": "user_question",
+        "raw_text": "Trong kịch bản này, 100% sản lượng thuốc lá bất hợp pháp được cắt giảm chuyển thành doanh số của BAT",
+        "applies_to": "Trong kịch bản này, 100% sản lượng thuốc lá bất hợp pháp được cắt giảm chuyển thành doanh số của BAT",
+        "value": "1",
+        "unit": "number"
+      },
+      "required_provenance": "Document inputs keep citations; the 100% scenario relation keeps a U condition ID and user-question span, without a fake document citation."
+    }
+  ]
+}

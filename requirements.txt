@@ -1,0 +1,8 @@
+# Install the CUDA torch/torchvision pair first with the command in README.
+docling-slim[format-pdf,models-local,feat-ocr-rapidocr,extract-core]==2.130.0
+PyMuPDF==1.26.7
+rapidfuzz==3.14.3
+psutil==7.2.2
+pytest==9.0.2
+qdrant-client==1.19.1
+streamlit==1.64.0

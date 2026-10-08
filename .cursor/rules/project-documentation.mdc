@@ -1,0 +1,14 @@
+---
+description: Ask for report format on each task and keep documentation proportional to code changes.
+alwaysApply: true
+---
+
+# Project task and documentation rule
+
+- Before starting each new user task, ask whether the user wants a separate report file or a normal chat response, unless the request already states the choice. Do not carry a previous task's answer forward as the default.
+- A requested code, data, or requirements file is a task artifact, not a report file. The format question does not replace the request to create that artifact.
+- Organize implementation by responsibility. Put shared contracts in `denso_a3/contracts.py` and separate each BT into its own package; keep orchestration separate from adapters, readers, and CLI.
+- Update the root `README.md` when a substantial code change alters architecture, the main execution flow, public function contracts, setup, or usage, so its existing guidance stays accurate.
+- Do not update `README.md` solely for simple tasks such as downloading a file or creating a standalone file, unless the user specifically requests documentation or existing README instructions become wrong.
+- When updating README for implementation work, explain the entry point and function call order, and document input/output of the main functions, including formats, coordinate systems, errors, and side effects where relevant.
+- Keep commands and limitations accurate; distinguish mocked verification from real runs. For a new BT, show its place in the repository tree and data exchanged with adjacent BTs.

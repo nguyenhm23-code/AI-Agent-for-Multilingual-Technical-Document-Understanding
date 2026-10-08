@@ -1,0 +1,13 @@
+{
+  "orchestration_mode": "auto",
+  "retrieval_strategy": "hybrid",
+  "visual_policy": "off",
+  "local_only": true,
+  "model_manifest": ".cache/rag/models.json",
+  "build_device": "cuda",
+  "query_device": "cuda",
+  "rerank_device": "cuda",
+  "caption_images": false,
+  "rerank": true,
+  "generation_provider": "local"
+}

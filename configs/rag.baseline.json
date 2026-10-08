@@ -1,0 +1,11 @@
+{
+  "orchestration_mode": "baseline",
+  "retrieval_strategy": "hybrid",
+  "visual_policy": "auto",
+  "local_only": true,
+  "query_device": "cuda",
+  "rerank_device": "cuda",
+  "caption_images": false,
+  "rerank": false,
+  "metadata_boost": false
+}

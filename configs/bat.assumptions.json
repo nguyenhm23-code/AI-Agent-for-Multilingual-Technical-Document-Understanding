@@ -1,0 +1,5 @@
+{
+  "artifact_status": "legacy_historical_only",
+  "migration": "The RAG product does not read this file. State scenario conditions explicitly in the question or clarification; --assumptions and research_assumptions are removed.",
+  "illicit_volume_to_bat_sales": "For this BAT hypothetical scenario, all removed illicit sticks become BAT sales (100% transfer). This is a user-selected assumption, not a verified document fact."
+}

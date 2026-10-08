@@ -1,0 +1,12 @@
+{
+  "orchestration_mode": "baseline",
+  "local_only": false,
+  "model_manifest": ".cache/rag/models.json",
+  "generation_provider": "api",
+  "api_enabled": false,
+  "api_base_url": "https://YOUR-PROVIDER/v1",
+  "api_model": "YOUR-MODEL",
+  "api_key_env": "DENSO_API_KEY",
+  "api_input_usd_per_million": null,
+  "api_output_usd_per_million": null
+}

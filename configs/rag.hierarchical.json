@@ -1,0 +1,19 @@
+{
+  "model_manifest": ".cache/rag/models.json",
+  "build_device": "cuda",
+  "query_device": "cuda",
+  "rerank_device": "cuda",
+  "caption_images": true,
+  "rerank": true,
+  "generation_provider": "local",
+  "orchestration_mode": "hierarchical",
+  "retrieval_strategy": "hybrid",
+  "visual_policy": "auto",
+  "local_only": true,
+  "build_hierarchy": true,
+  "research_max_rounds": 3,
+  "research_max_tasks": 6,
+  "research_max_calls": 12,
+  "research_deadline_seconds": 300,
+  "research_context_tokens": 4500
+}

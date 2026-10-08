@@ -1,0 +1,759 @@
+{
+  "schema_version": "1.0",
+  "annotation_origin": "agent_visual_source_review",
+  "review_status": "needs_user_review",
+  "reviewer": "Codex agent",
+  "created_at": "2026-09-26",
+  "source_render": {
+    "renderer": "Poppler pdftoppm",
+    "dpi": 144,
+    "dimensions": [
+      1190,
+      1684
+    ]
+  },
+  "scope": "Exhaustive table detection on five pilot pages; partial layout (tables + one figure); full cell topology/text only for p15_controls.",
+  "notes": [
+    "Annotations were transcribed from source images before viewing model predictions.",
+    "Redacted names were not reconstructed; table dimensions still include their cells.",
+    "Pilot is not a held-out test set. Counts/geometry and Unicode punctuation need human confirmation.",
+    "Full-cell ground-truth boxes are not comparable to OCR text-region cell boxes for cell IoU."
+  ],
+  "pages": [
+    {
+      "source_relative": "nhwc0428.pdf",
+      "source_sha256": "ee41bd62591fe5390c12fb4625cce15d03997dd1bccde34f34d80635e70a84d7",
+      "page_number": 2,
+      "bbox_space": "normalized_page_image",
+      "table_detection_exhaustive": true,
+      "layout_detection_exhaustive": false,
+      "tables": [
+        {
+          "annotation_id": "p2_revision",
+          "bbox": [
+            0.094958,
+            0.205463,
+            0.882353,
+            0.584917
+          ],
+          "num_rows": 9,
+          "num_columns": 4,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        },
+        {
+          "annotation_id": "p2_distribution",
+          "bbox": [
+            0.094958,
+            0.670428,
+            0.882353,
+            0.890736
+          ],
+          "num_rows": 7,
+          "num_columns": 4,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        }
+      ],
+      "layout": [
+        {
+          "annotation_id": "p2_revision",
+          "type": "table",
+          "bbox": [
+            0.094958,
+            0.205463,
+            0.882353,
+            0.584917
+          ]
+        },
+        {
+          "annotation_id": "p2_distribution",
+          "type": "table",
+          "bbox": [
+            0.094958,
+            0.670428,
+            0.882353,
+            0.890736
+          ]
+        }
+      ]
+    },
+    {
+      "source_relative": "nhwc0428.pdf",
+      "source_sha256": "ee41bd62591fe5390c12fb4625cce15d03997dd1bccde34f34d80635e70a84d7",
+      "page_number": 8,
+      "bbox_space": "normalized_page_image",
+      "table_detection_exhaustive": true,
+      "layout_detection_exhaustive": false,
+      "tables": [
+        {
+          "annotation_id": "p8_milestones",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.977311,
+            0.909739
+          ],
+          "num_rows": 21,
+          "num_columns": 4,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        }
+      ],
+      "layout": [
+        {
+          "annotation_id": "p8_milestones",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.977311,
+            0.909739
+          ]
+        }
+      ]
+    },
+    {
+      "source_relative": "nhwc0428.pdf",
+      "source_sha256": "ee41bd62591fe5390c12fb4625cce15d03997dd1bccde34f34d80635e70a84d7",
+      "page_number": 11,
+      "bbox_space": "normalized_page_image",
+      "table_detection_exhaustive": true,
+      "layout_detection_exhaustive": false,
+      "tables": [
+        {
+          "annotation_id": "p11_schedule",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.938655,
+            0.268409
+          ],
+          "num_rows": 6,
+          "num_columns": 3,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        },
+        {
+          "annotation_id": "p11_cost",
+          "bbox": [
+            0.085714,
+            0.383017,
+            0.938655,
+            0.607482
+          ],
+          "num_rows": 6,
+          "num_columns": 4,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        }
+      ],
+      "layout": [
+        {
+          "annotation_id": "p11_schedule",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.938655,
+            0.268409
+          ]
+        },
+        {
+          "annotation_id": "p11_cost",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.383017,
+            0.938655,
+            0.607482
+          ]
+        }
+      ]
+    },
+    {
+      "source_relative": "nhwc0428.pdf",
+      "source_sha256": "ee41bd62591fe5390c12fb4625cce15d03997dd1bccde34f34d80635e70a84d7",
+      "page_number": 13,
+      "bbox_space": "normalized_page_image",
+      "table_detection_exhaustive": true,
+      "layout_detection_exhaustive": false,
+      "tables": [
+        {
+          "annotation_id": "p13_role",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.908403,
+            0.240499
+          ],
+          "num_rows": 5,
+          "num_columns": 3,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        }
+      ],
+      "layout": [
+        {
+          "annotation_id": "p13_role",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.098575,
+            0.908403,
+            0.240499
+          ]
+        },
+        {
+          "annotation_id": "p13_org_chart",
+          "type": "figure",
+          "bbox": [
+            0.095798,
+            0.340261,
+            0.843697,
+            0.505344
+          ]
+        }
+      ]
+    },
+    {
+      "source_relative": "nhwc0428.pdf",
+      "source_sha256": "ee41bd62591fe5390c12fb4625cce15d03997dd1bccde34f34d80635e70a84d7",
+      "page_number": 15,
+      "bbox_space": "normalized_page_image",
+      "table_detection_exhaustive": true,
+      "layout_detection_exhaustive": false,
+      "tables": [
+        {
+          "annotation_id": "p15_controls",
+          "bbox": [
+            0.085714,
+            0.146675,
+            0.905042,
+            0.393112
+          ],
+          "num_rows": 8,
+          "num_columns": 4,
+          "cells": [
+            {
+              "row_index": 0,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Control",
+              "bbox": [
+                0.085714,
+                0.146675,
+                0.428571,
+                0.175178
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 0,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Frequency",
+              "bbox": [
+                0.428571,
+                0.146675,
+                0.607563,
+                0.175178
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 0,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "From",
+              "bbox": [
+                0.607563,
+                0.146675,
+                0.75042,
+                0.175178
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 0,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "To",
+              "bbox": [
+                0.75042,
+                0.146675,
+                0.905042,
+                0.175178
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 1,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Workstream plans / PID’s submitted",
+              "bbox": [
+                0.085714,
+                0.175178,
+                0.428571,
+                0.203088
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 1,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.428571,
+                0.175178,
+                0.607563,
+                0.203088
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 1,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Workstreams",
+              "bbox": [
+                0.607563,
+                0.175178,
+                0.75042,
+                0.203088
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 1,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "PM",
+              "bbox": [
+                0.75042,
+                0.175178,
+                0.905042,
+                0.203088
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 2,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Project PID approved and submitted",
+              "bbox": [
+                0.085714,
+                0.203088,
+                0.428571,
+                0.231591
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 2,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.428571,
+                0.203088,
+                0.607563,
+                0.231591
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 2,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "PM",
+              "bbox": [
+                0.607563,
+                0.203088,
+                0.75042,
+                0.231591
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 2,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Programme office",
+              "bbox": [
+                0.75042,
+                0.203088,
+                0.905042,
+                0.231591
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 3,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Workstream review workshops",
+              "bbox": [
+                0.085714,
+                0.231591,
+                0.428571,
+                0.260095
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 3,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Twice a year",
+              "bbox": [
+                0.428571,
+                0.231591,
+                0.607563,
+                0.260095
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 3,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.607563,
+                0.231591,
+                0.75042,
+                0.260095
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 3,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.75042,
+                0.231591,
+                0.905042,
+                0.260095
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 4,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Project review meetings",
+              "bbox": [
+                0.085714,
+                0.260095,
+                0.428571,
+                0.288005
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 4,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Twice a year",
+              "bbox": [
+                0.428571,
+                0.260095,
+                0.607563,
+                0.288005
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 4,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.607563,
+                0.260095,
+                0.75042,
+                0.288005
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 4,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.75042,
+                0.260095,
+                0.905042,
+                0.288005
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 5,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Workstream monthly highlight reports",
+              "bbox": [
+                0.085714,
+                0.288005,
+                0.428571,
+                0.315914
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 5,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Monthly",
+              "bbox": [
+                0.428571,
+                0.288005,
+                0.607563,
+                0.315914
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 5,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.607563,
+                0.288005,
+                0.75042,
+                0.315914
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 5,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.75042,
+                0.288005,
+                0.905042,
+                0.315914
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 6,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Project monthly highlight reports",
+              "bbox": [
+                0.085714,
+                0.315914,
+                0.428571,
+                0.344418
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 6,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Monthly",
+              "bbox": [
+                0.428571,
+                0.315914,
+                0.607563,
+                0.344418
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 6,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.607563,
+                0.315914,
+                0.75042,
+                0.344418
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 6,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.75042,
+                0.315914,
+                0.905042,
+                0.344418
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 7,
+              "column_index": 0,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "Significant changes in plans or scope to be approved by the Growth Programme Board",
+              "bbox": [
+                0.085714,
+                0.344418,
+                0.428571,
+                0.393112
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 7,
+              "column_index": 1,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "When necessary when changes occur",
+              "bbox": [
+                0.428571,
+                0.344418,
+                0.607563,
+                0.393112
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "visible"
+            },
+            {
+              "row_index": 7,
+              "column_index": 2,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.607563,
+                0.344418,
+                0.75042,
+                0.393112
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            },
+            {
+              "row_index": 7,
+              "column_index": 3,
+              "rowspan": 1,
+              "colspan": 1,
+              "text_raw": "",
+              "bbox": [
+                0.75042,
+                0.344418,
+                0.905042,
+                0.393112
+              ],
+              "bbox_precision": "full_cell",
+              "content_status": "verified_empty"
+            }
+          ],
+          "cell_annotation_exhaustive": true
+        },
+        {
+          "annotation_id": "p15_risk",
+          "bbox": [
+            0.085714,
+            0.478622,
+            0.894118,
+            0.887767
+          ],
+          "num_rows": 6,
+          "num_columns": 5,
+          "cells": [],
+          "cell_annotation_exhaustive": false
+        }
+      ],
+      "layout": [
+        {
+          "annotation_id": "p15_controls",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.146675,
+            0.905042,
+            0.393112
+          ]
+        },
+        {
+          "annotation_id": "p15_risk",
+          "type": "table",
+          "bbox": [
+            0.085714,
+            0.478622,
+            0.894118,
+            0.887767
+          ]
+        }
+      ]
+    }
+  ]
+}
