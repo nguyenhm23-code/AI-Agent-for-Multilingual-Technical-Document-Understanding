@@ -1,6 +1,6 @@
-# RAG System for Multilingual Technical Document Understanding
+# AI Agent for Multilingual Technical Document Understanding
 
-Tên repository: `RAG-System-for-Multilingual-Technical-Document-Understanding`. Dự án gồm extraction BT1–BT3 và RAG BT4–BT7; package Python là `denso_a3`.
+Tên repository: `AI-Agent-for-Multilingual-Technical-Document-Understanding`. Dự án gồm extraction BT1–BT3 và RAG BT4–BT7; package Python là `denso_a3`.
 
 Prototype hỏi đáp tài liệu chạy local, tự chọn baseline hoặc hierarchical theo yêu cầu công việc. UI chỉ cần câu hỏi, phạm vi tài liệu và chế độ hội thoại; keyword + semantic dùng hybrid bên trong. Cả hai kiến trúc dùng chung một phase VLM đọc evidence ảnh khi cần, rồi tổng hợp từ text/visual support có nguồn.
 
