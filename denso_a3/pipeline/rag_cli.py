@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from datetime import datetime, timezone, timedelta
+import uuid
 from .rag_config import load_config, PROJECT as PROJECT_ROOT
 from ..io import write_json
 
@@ -17,6 +19,7 @@ def main(argv):
     bootstrap.add_argument("--root", default=str(PROJECT_ROOT / ".cache/rag"))
     ui = sub.add_parser("rag-ui")
     ui.add_argument("--port", type=int, default=8501)
+    ui.add_argument("--host", default="127.0.0.1", help="Bind address; use 0.0.0.0 inside a container")
     build = sub.add_parser("rag-build")
     build.add_argument("--run", nargs="+", required=True)
     build.add_argument("--output", required=True)
@@ -65,6 +68,13 @@ def main(argv):
     evaluation.add_argument("--retrieval-only", action="store_true")
     evaluation.add_argument("--scope", choices=["source", "global"], default="source")
     evaluation.add_argument("--language", choices=["en", "vi"], default="en")
+    slides = sub.add_parser("rag-evaluate-slides", help="Run a question file and save one portable HTML evaluation report")
+    slides.add_argument("--index", help="Ready index; defaults to the index saved by the UI")
+    slides.add_argument("--questions", default=str(PROJECT_ROOT / "evaluation/slide_questions.json"))
+    slides.add_argument("--config", default=str(PROJECT_ROOT / "configs/rag.local.json"))
+    slides.add_argument("--output", help="New .html file; defaults to results/slide_evaluations/<timestamp>.html")
+    slides.add_argument("--limit", type=int, help="Run only the first N nonempty questions for a smoke check")
+    slides.add_argument("--mode", choices=["auto", "baseline", "hierarchical"])
     if any(argument == "--assumptions" or argument.startswith("--assumptions=") for argument in argv):
         parser.error("--assumptions was removed. Put explicit scenario conditions in --question or answer the clarification; no assumptions JSON is accepted.")
     args = parser.parse_args(argv)
@@ -75,7 +85,7 @@ def main(argv):
             return 0
         if args.command == "rag-ui":
             return subprocess.call([sys.executable, "-m", "streamlit", "run", str(PROJECT_ROOT / "denso_a3/ui/app.py"),
-                "--server.address", "127.0.0.1", "--server.port", str(args.port), "--browser.gatherUsageStats", "false"], cwd=PROJECT_ROOT)
+                "--server.address", args.host, "--server.port", str(args.port), "--browser.gatherUsageStats", "false"], cwd=PROJECT_ROOT)
         if args.command == "rag-metadata":
             from .index_builder import update_metadata
             result = update_metadata(args.index, json.loads(Path(args.registry).read_text(encoding="utf-8-sig")), args.output)
@@ -84,7 +94,18 @@ def main(argv):
             if getattr(args, "mode", None):
                 config = replace(config, orchestration_mode=args.mode)
                 config.validate()
-            if args.command == "rag-suggest-metadata":
+            if args.command == "rag-evaluate-slides":
+                from ..evaluation.slide_report import evaluate_for_slides
+                index = args.index
+                if not index:
+                    state = PROJECT_ROOT / ".local/workspace.json"
+                    index = json.loads(state.read_text(encoding="utf-8-sig")).get("index") if state.is_file() else None
+                if not index or not (Path(index) / "manifest.json").is_file():
+                    raise ValueError("Chưa có index hợp lệ. Truyền --index <đường dẫn snapshot ready đang dùng trong UI>")
+                output = args.output or str(PROJECT_ROOT / "results/slide_evaluations" /
+                    ("evaluation_" + datetime.now(timezone(timedelta(hours=7))).strftime("%Y%m%d_%H%M%S") + "_" + uuid.uuid4().hex[:6] + ".html"))
+                result = evaluate_for_slides(index, args.questions, output, config, args.limit)
+            elif args.command == "rag-suggest-metadata":
                 from .index_builder import suggest_index_metadata
                 if args.rules_only:
                     config = replace(config, metadata_use_llm=False)
@@ -115,6 +136,10 @@ def main(argv):
                 if args.output:
                     write_json(Path(args.output), result)
         print(json.dumps(result, ensure_ascii=True, indent=2))
+        if args.command == "rag-evaluate-slides":
+            if result["state"] == "interrupted":
+                return 130
+            return int(bool(result["status_counts"].get("error")))
         return int(args.command in {"rag-evaluate","rag-evaluate-multidoc"} and bool(result.get("errors")))
     except Exception as exc:
         print(f"{type(exc).__name__}: {exc}", file=sys.stderr)

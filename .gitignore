@@ -49,11 +49,10 @@ __pycache__/
 /tmp/
 /temp/
 
-# Machine-specific editor and OS files (keep shared .cursor/rules)
+# Machine-specific editor and OS files
 /.idea/
 /.vscode/
-/.cursor/workspaceStorage/
-/.cursor/cache/
+/.cursor/
 .DS_Store
 Thumbs.db
 Desktop.ini

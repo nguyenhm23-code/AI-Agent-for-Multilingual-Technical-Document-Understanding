@@ -1,0 +1,20 @@
+# Explicit allowlist: never send local weights, documents, secrets or venv.
+**
+!Dockerfile
+!.dockerignore
+!requirements.txt
+!requirements.lock.txt
+!cuda-constraints.txt
+!docker/
+!docker/**
+!denso_a3/
+!denso_a3/**
+!configs/
+!configs/**
+!ground_truth/
+!ground_truth/**
+**/__pycache__/
+**/*.pyc
+**/.env*
+**/*.key
+**/*.pem

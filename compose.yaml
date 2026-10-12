@@ -1,0 +1,20 @@
+services:
+  pipeline:
+    image: denso-pipeline:local
+    build:
+      context: .
+    init: true
+    gpus: all
+    ports:
+      - "127.0.0.1:8501:8501"
+    volumes:
+      - model-cache:/app/.cache
+      - app-data:/app/.local
+      - ./evaluation/data:/app/evaluation/data:ro
+      - ./results:/app/results
+    shm_size: "2gb"
+    stop_grace_period: 30s
+
+volumes:
+  model-cache:
+  app-data:

@@ -12,6 +12,14 @@ LLAMA_RELEASE = "b11235"
 
 
 def bootstrap(root: Path, include_e5=False):
+    # Containers supply a Linux CUDA runtime built from the same pinned release.
+    supplied_server = os.environ.get("DENSO_LLAMA_SERVER")
+    if supplied_server:
+        server = Path(supplied_server).resolve()
+        if not server.is_file() or not os.access(server, os.X_OK):
+            raise FileNotFoundError(f"DENSO_LLAMA_SERVER is not an executable file: {server}")
+    elif os.name != "nt":
+        raise RuntimeError("Set DENSO_LLAMA_SERVER to a Linux llama-server executable, or use the Docker image")
     from huggingface_hub import HfApi, snapshot_download, hf_hub_download
     root = root.resolve()
     root.mkdir(parents=True, exist_ok=True)
@@ -42,6 +50,12 @@ def bootstrap(root: Path, include_e5=False):
     paths = [hf_hub_download(repo, n, revision=info.sha, local_dir=target) for n in (language, projector)]
     manifest["models"]["generation"] = {"repo": repo, "revision": info.sha, "model": paths[0], "mmproj": paths[1]}
     write_json(root / "models.json", manifest)
+    if supplied_server:
+        manifest["llama_server"] = str(server)
+        manifest["llama_server_sha256"] = sha256_file(server)
+        write_json(root / "models.json", manifest)
+        print("Bootstrap complete: " + str(root / "models.json"), flush=True)
+        return manifest
     release = json.load(urllib.request.urlopen(f"https://api.github.com/repos/ggml-org/llama.cpp/releases/tags/{LLAMA_RELEASE}"))
     wanted = {f"llama-{LLAMA_RELEASE}-bin-win-cuda-12.4-x64.zip", "cudart-llama-bin-win-cuda-12.4-x64.zip"}
     runtime = root / "llama" / LLAMA_RELEASE

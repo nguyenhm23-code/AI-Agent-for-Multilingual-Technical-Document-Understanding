@@ -1,0 +1,563 @@
+{
+  "title": "DENSO A3 — 30 câu hỏi MELSEC Consolidated Catalog L(NA)08322ENG-J",
+  "dataset_version": "1.0",
+  "review_status": "agent_source_reviewed_needs_human_review",
+  "source_document": {
+    "source_relative": "59f1648f8fd3_000_l08322engj.pdf",
+    "path": ".local/uploads/59f1648f8fd3/59f1648f8fd3_000_l08322engj.pdf",
+    "sha256": "4e691293d1b54eb0db6c2b6136461865b0ed51c48130c1540133feedbf1d3297",
+    "title": "MELSEC Consolidated Catalog",
+    "publication_identifier": "L(NA)08322ENG-J 2212(IP)",
+    "effective_date": "2022-12",
+    "language": "en",
+    "pdf_pages": 52,
+    "page_numbering": "Số trang PDF tính từ 1; các trang dẫn có số in khớp số trang PDF."
+  },
+  "category_counts": {
+    "tra_cuu": 6,
+    "bang_bieu": 6,
+    "da_ngon_ngu": 6,
+    "hinh_anh": 4,
+    "tong_hop": 4,
+    "thieu_mo_ho_revision_xung_dot": 4
+  },
+  "instructions": [
+    "Bộ câu hỏi đã điền đầy đủ 30 câu; chạy bằng rag-evaluate-slides như hướng dẫn hiện có.",
+    "Mọi filters.source_relative giới hạn đúng PDF này; index phải chứa nguồn có đúng tên trên. Không hard-filter trang, không đưa đáp án hoặc evidence_pages vào inference.",
+    "Mỗi câu chạy độc lập. Q01–Q12 và Q19–Q22 hỏi bằng tiếng Anh; Q13–Q18 hỏi tiếng Việt để kiểm tra nguồn tiếng Anh; Q23–Q30 cũng dùng tiếng Việt.",
+    "Đáp án tham khảo được tạo từ text PDF gốc và đối chiếu ảnh trang, không dùng đáp án của hệ thống để đặt gold. Chưa được con người phê duyệt; không tự gán human_reviewed.",
+    "expected_answer, reference, evidence_pages và scoring_notes phục vụ review sau khi test; evaluator hiện tại không chấm đúng ngữ nghĩa tự động.",
+    "Nhóm hình ảnh có số trang gợi ý trong câu hỏi để tập trung đọc hình. Khi báo cáo, không gọi kết quả đó là độ đúng truy xuất trang mù hoặc bằng chứng VLM đã được gọi; kiểm tra trace thực tế.",
+    "Q23–Q26 kiểm tra nhiều đoạn/trang trong MỘT tài liệu, chưa kiểm tra retrieval nhiều tài liệu. Q25 có phép tính và phân biệt đại lượng.",
+    "Q27 thiếu giá; Q28 thiếu dòng/model; Q29 thiếu revision trước; Q30 phản bác giả định sai bằng chú thích. Catalogue không có cặp nguồn mâu thuẫn thật để tạo gold conflict.",
+    "Khớp expected_status chỉ là chỉ số kỹ thuật. Các cách diễn đạt từ chối/làm rõ tương đương ở Q27–Q29 cần chấm nội dung thủ công theo scoring_notes.",
+    "Giữ index và file câu hỏi cố định khi so sánh các model/cấu hình. Đây là bộ thử single-document do agent biên soạn, chưa phải hold-out đã được DENSO nghiệm thu."
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "According to the catalogue, what does the acronym MELSEC stand for?",
+      "expected_answer": "Mitsubishi ELectric SEquence Control.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 3 (đếm từ 1). Intelligence in everything automated—MELSEC.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        3
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Chấp nhận khác biệt chữ hoa/chữ thường; phải đủ bốn thành phần của tên."
+    },
+    {
+      "id": "Q02",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "In the MELSEC iQ-R description, approximately how much faster is the high-speed system bus than existing models?",
+      "expected_answer": "Approximately 40 times faster. This statement is about the system bus, not a universal CPU instruction-speed ratio.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 13 (đếm từ 1). High-speed/high-accuracy processing improves productivity.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        13
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải giữ từ approximately/khoảng; không biến 40x thành kết quả đo mọi phép xử lý."
+    },
+    {
+      "id": "Q03",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "Which four record operations are explicitly supported by the MELSEC iQ-R internal database commands?",
+      "expected_answer": "Add, update, search and delete records.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 17 (đếm từ 1). Easy data management utilizing internal database (DB).",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        17
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải đủ bốn thao tác; không suy ra các chức năng cơ sở dữ liệu không được nêu."
+    },
+    {
+      "id": "Q04",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "For the supported High-speed Universal model QCPUs, what maximum continuous file-register capacity is described when an 8 MB extended SRAM cassette is installed? Give the unit used in the catalogue.",
+      "expected_answer": "Up to 4736K words. The description requires an 8 MB extended SRAM cassette; footnote *2 restricts support to Q03UDV, Q04UDV, Q06UDV, Q13UDV and Q26UDV.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 19 (đếm từ 1). Large data volume at high-speed; chú thích *2.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        19
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Đáp án cốt lõi: 4736K words, không phải K bytes hay MB. Không áp dụng cho mọi QCPU."
+    },
+    {
+      "id": "Q05",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "Which programming standard does the GX Works3 section explicitly state that the software complies with?",
+      "expected_answer": "IEC 61131-3.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 38 (đếm từ 1). Intuitive engineering software covering the product development cycle; Complies with IEC 61131-3.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        38
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không nhầm với tiêu chuẩn an toàn IEC 61508."
+    },
+    {
+      "id": "Q06",
+      "category": "tra_cuu",
+      "language": "en",
+      "question": "What publication identifier and effective month and year are printed on the back cover of this catalogue?",
+      "expected_answer": "L(NA)08322ENG-J 2212(IP); new publication effective December 2022.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 52 (đếm từ 1). Dòng nhận diện ấn phẩm và ngày hiệu lực ở cuối bìa sau.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        52
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải nhận diện ENG-J và December 2022; không gọi đây là phiên bản mới nhất hiện nay."
+    },
+    {
+      "id": "Q07",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "In the MELSEC Selection Guide, what are the program size and device/label memory/standard RAM values for MELSEC iQ-R? Include both units.",
+      "expected_answer": "Program size: 1200 K step. Device/label memory/standard RAM: 3380 K byte.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10 (đếm từ 1). Bảng Controller lineup, cột MELSEC iQ-R; hàng Program size và Device/label memory/standard RAM.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không lấy nhầm 40M byte của hàng Data memory/standard ROM."
+    },
+    {
+      "id": "Q08",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "In the MELSEC Selection Guide, what are the MOV instruction time and floating-point addition time for MELSEC-Q? Preserve the units shown in each row.",
+      "expected_answer": "MOV instruction: 3.9 ns. Floating-point addition: 0.014 μs.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10 (đếm từ 1). Bảng Controller lineup, cột MELSEC-Q; Processing speed.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Chấp nhận us/microseconds thay μs; không đổi 0.014 μs thành 0.014 ns."
+    },
+    {
+      "id": "Q09",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "What program size and number of I/O points (X/Y) are listed for MELSEC-L in the Selection Guide?",
+      "expected_answer": "Program size: 260 K step. Number of I/O points (X/Y): 4096 points.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10 (đếm từ 1). Bảng Controller lineup, cột MELSEC-L.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không lấy 768 K byte của hàng RAM làm program size."
+    },
+    {
+      "id": "Q10",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "Using the row labels of the two-page Selection Guide, what program size and number of I/O points (X/Y) are listed for FX3S?",
+      "expected_answer": "Program size: 4 K step. Number of I/O points (X/Y): 30 points.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 11 (đếm từ 1). Bảng nối trang: tên hàng ở trang 10, cột FX3S thuộc MELSEC-F ở trang 11.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        11
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải ghép đúng hàng xuyên hai trang; không lấy 32 K step/128 points của FX3G/FX3GC."
+    },
+    {
+      "id": "Q11",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "What operating ambient temperature range is listed for FX5U/FX5UC in the Selection Guide, and what production-date/serial-number condition is attached to the lower limit?",
+      "expected_answer": "−20 to 55 °C. Footnote *19 says the −20 °C lower limit is supported by products produced from June 2016, serial number '166' or later; consult the relevant product manual for supported products.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 11 (đếm từ 1). Operating ambient temperature; cột FX5U/FX5UC; chú thích *19 trang 11.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        11
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Cần cả khoảng nhiệt độ và điều kiện; không áp −20 °C cho FX5UJ hay mọi sản phẩm đời cũ."
+    },
+    {
+      "id": "Q12",
+      "category": "bang_bieu",
+      "language": "en",
+      "question": "In the Selection Guide, what normal operating ambient temperature range is listed for MELSEC iQ-R, and under what condition is the 60 °C upper limit supported?",
+      "expected_answer": "Normally 0 to 55 °C. The 60 °C upper limit is supported only when used with extended-temperature-range main/extension base units, according to footnote *15.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10 (đếm từ 1). Operating ambient temperature, cột MELSEC iQ-R và chú thích *15.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không trả 0–60 °C vô điều kiện; phải giữ yêu cầu base unit dải nhiệt mở rộng."
+    },
+    {
+      "id": "Q13",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "Theo phần e-F@ctory trong catalogue, điện toán biên đóng vai trò gì trong việc kết nối FA và IT, và giúp cải thiện những yếu tố sản xuất nào? Trả lời bằng tiếng Việt.",
+      "expected_answer": "Điện toán biên thực hiện xử lý tại nguồn bằng việc thu thập và phân tích dữ liệu liền mạch, kết nối FA với IT để tối ưu hoạt động sản xuất, trong đó có năng suất và chất lượng.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 4 (đếm từ 1). Edge-computing (FA-IT information connection).",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        4
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Đánh giá hiểu nguồn tiếng Anh và diễn đạt tiếng Việt; không tự thêm tỷ lệ tiết kiệm hoặc độ trễ."
+    },
+    {
+      "id": "Q14",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "Catalogue nêu hai ứng dụng nào trên máy tính có thể truy cập dữ liệu cơ sở dữ liệu nội bộ của CPU MELSEC iQ-R? Trả lời bằng tiếng Việt, giữ nguyên tên ứng dụng.",
+      "expected_answer": "Microsoft Access và Microsoft Excel.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 17 (đếm từ 1). Easy data management utilizing internal database (DB).",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        17
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Cần đủ Access và Excel; không thay bằng GX Works3. Ứng dụng tự phát triển cũng được hình minh họa nhắc tới nhưng không phải hai ứng dụng có tên được hỏi."
+    },
+    {
+      "id": "Q15",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "MELSEC iQ-R sử dụng hai cơ chế bảo vệ nào để bảo vệ chương trình và ngăn truy cập trái phép qua mạng? Giải thích ngắn bằng tiếng Việt.",
+      "expected_answer": "Nhận diện khóa bảo mật phần cứng để bảo vệ chương trình và bộ lọc IP để ngăn truy cập trái phép vào hệ thống điều khiển qua mạng.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 13 (đếm từ 1). Powerful security features protecting intellectual property.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        13
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải gắn đúng cơ chế với mục đích; không tự suy ra chứng nhận an ninh hoặc thuật toán mã hóa."
+    },
+    {
+      "id": "Q16",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "Vì sao cấu trúc bus tích hợp của MELSEC-L giúp tiết kiệm không gian lắp đặt? Dòng này có cần base unit không và có thể gắn trực tiếp lên đâu?",
+      "expected_answer": "MELSEC-L không cần base unit; nhờ bus hệ thống tích hợp, các module có thể gắn trực tiếp lên thanh DIN với không gian cần thiết tối thiểu. Việc loại bỏ base unit mở rộng cũng có thể giảm chi phí.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 21 (đếm từ 1). Gain more flexibility with an integrated system bus structure.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        21
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không diễn giải không bị giới hạn bởi số khe base unit thành hỗ trợ số module vô hạn."
+    },
+    {
+      "id": "Q17",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "Trong phần kết nối hệ thống IT cấp trên của MELSEC iQ-F, FX5-OPC hỗ trợ vai trò OPC UA nào, có cần máy tính gateway không và bảo mật đường truyền bằng cách nào?",
+      "expected_answer": "FX5-OPC hỗ trợ OPC UA server, cho phép kết nối hệ thống IT cấp trên mà không cần máy tính gateway; đường truyền sử dụng giao tiếp mã hóa.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 25 (đếm từ 1). Direct access to the upper IT system, hình và bullet liên quan.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        25
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Giữ đúng server ở FX5-OPC; không đổi thành client hay tự nêu thuật toán mã hóa."
+    },
+    {
+      "id": "Q18",
+      "category": "da_ngon_ngu",
+      "language": "vi",
+      "question": "GX Works3 hỗ trợ đa ngôn ngữ ở những cấp nào được catalogue nêu rõ? Trả lời bằng tiếng Việt.",
+      "expected_answer": "Catalogue nêu menu phần mềm đa ngôn ngữ và khả năng chuyển ngôn ngữ chú thích thiết bị (device comments).",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 38 (đếm từ 1). Global realization by multi-language support.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        38
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không suy ra danh sách ngôn ngữ cụ thể, chẳng hạn khẳng định có tiếng Việt, nếu nguồn không nêu."
+    },
+    {
+      "id": "Q19",
+      "category": "hinh_anh",
+      "language": "en",
+      "question": "Look at the Integrated safety control illustration on PDF page 15. Which four devices are grouped under Safety I/O, and which two are grouped under General I/O?",
+      "expected_answer": "Safety I/O: enabling switch, emergency stop switch, safety light curtain, door lock switch. General I/O: switch and indicator light.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 15 (đếm từ 1). Hình nửa trên, hai nhóm Safety I/O và General I/O ở bên phải.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        15
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải dùng bố cục nhóm trong hình, không chỉ liệt kê sáu tên. Có gợi ý trang trong câu hỏi để kiểm tra đọc hình, không phải truy xuất trang mù."
+    },
+    {
+      "id": "Q20",
+      "category": "hinh_anh",
+      "language": "en",
+      "question": "In the data-logging graph on PDF page 24, which annotated region lies before the Trigger and which lies after it: Fault cause or Fault signal from inspection machine? Does the collection interval cover one side or both sides of the trouble?",
+      "expected_answer": "The Fault cause region is before/left of the Trigger; the Fault signal from inspection machine region is after/right of it. The collection interval covers both before and after the trouble.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 24 (đếm từ 1). Đồ thị trong Data logging function; ba vùng đánh dấu và mũi tên hai chiều phía dưới.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        24
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Đối chiếu quan hệ trái/phải trong ảnh. Không suy ra khoảng thời gian bằng số vì trục không cho thang thời gian."
+    },
+    {
+      "id": "Q21",
+      "category": "hinh_anh",
+      "language": "en",
+      "question": "In the Web server function network diagram on PDF page 24, how many VPN routers are drawn, what link connects them, and on which side of that link is the Wi-Fi access point shown?",
+      "expected_answer": "Two VPN routers are drawn, connected by a VPN tunnel across the Internet. The Wi-Fi access point is on the Office/right-hand side of that tunnel.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 24 (đếm từ 1). Hình Web server function: Paid parking bên trái, Office bên phải.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        24
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Cần đếm hai router và xác định đúng phía Wi-Fi; không suy từ kiến thức mạng chung."
+    },
+    {
+      "id": "Q22",
+      "category": "hinh_anh",
+      "language": "en",
+      "question": "In the Direct access to the upper IT system diagram on PDF page 25, what OPC UA role is assigned to the upper system, how many FX5-OPC server blocks are shown, and how are those server-to-client links labelled?",
+      "expected_answer": "The upper system is an OPC UA client. Two FX5-OPC server blocks are shown, in Equipment A and Equipment B. Their links to the upper client are labelled Encrypted communication.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 25 (đếm từ 1). Hình kết nối OPC UA, vai trò Client/Server và hai khối Equipment A/B.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        25
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải có vai trò, số lượng và nhãn liên kết; không nhầm hai PLC Company A/B với hai server blocks."
+    },
+    {
+      "id": "Q23",
+      "category": "tong_hop",
+      "language": "vi",
+      "question": "Đối chiếu MELSEC Selection Guide với phần giới thiệu GX Works3: phần mềm GX Works nào được liệt kê cho iQ-R, iQ-F, Q và L, và GX Works3 được mô tả là bao phủ những giai đoạn nào của vòng đời phát triển?",
+      "expected_answer": "Bảng liệt kê GX Works3 cho iQ-R và iQ-F, GX Works2 cho MELSEC-Q và MELSEC-L. Phần GX Works3 mô tả bao phủ từ thiết kế hệ thống, lập trình đến debug/bảo trì.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 11, 38 (đếm từ 1). Engineering environment trong Selection Guide và phần GX Works3.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        11,
+        38
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Cần ghép đủ bốn dòng PLC và vòng đời. Không kết luận danh sách này chứng minh mọi phiên bản phần mềm tương thích mọi model."
+    },
+    {
+      "id": "Q24",
+      "category": "tong_hop",
+      "language": "vi",
+      "question": "So sánh quản lý recipe bằng cơ sở dữ liệu nội bộ MELSEC iQ-R với Easy logging của MELSEC-Q: mỗi chức năng quản lý dữ liệu theo cách nào, và catalogue nêu công cụ hoặc cách truy cập/xem dữ liệu nào cho từng bên? Nêu cả giới hạn model của Easy logging.",
+      "expected_answer": "iQ-R có cơ sở dữ liệu nội bộ để thêm/cập nhật/tìm/xóa recipe và dữ liệu sản xuất, truy cập bằng Access/Excel hoặc ứng dụng tự phát triển như hình minh họa. MELSEC-Q Easy logging ghi log dạng CSV lên thẻ SD, xem trên máy tính hoặc GOT (HMI); hình nêu GX LogViewer và GOT log viewer. Easy logging hỗ trợ Q03UDV, Q04UDV, Q06UDV, Q13UDV, Q26UDV theo chú thích *3.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 17, 19 (đếm từ 1). Internal database ở trang 17; Easy logging và chú thích *3 trang 19.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        17,
+        19
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Phải phân biệt DB với file CSV; không gán bốn thao tác DB cho Easy logging hoặc áp logging cho toàn bộ Q Series."
+    },
+    {
+      "id": "Q25",
+      "category": "tong_hop",
+      "language": "vi",
+      "question": "Dựa vào thời gian lệnh LD trong Selection Guide, hãy tính tỷ số thời gian LD của MELSEC-Q chia cho MELSEC iQ-R, làm tròn hai chữ số thập phân. Đối chiếu với phát biểu khoảng 40 lần trong phần iQ-R: hai số này có đo cùng đại lượng không?",
+      "expected_answer": "LD: MELSEC-Q 1,9 ns, MELSEC iQ-R 0,98 ns. Tỷ số 1,9/0,98 ≈ 1,94. Không cùng đại lượng: 1,94 là tỷ số thời gian thực thi lệnh LD của hai cột trong bảng; khoảng 40 lần nói về tốc độ system bus so với existing models, không phải tỷ số thời gian LD và nguồn không chỉ định riêng MELSEC-Q làm mốc cho phát biểu bus.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 13 (đếm từ 1). Hàng LD instruction (ns) trang 10; High-speed system bus trang 13.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        13
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Cần đúng thứ tự chia và phân biệt hai đại lượng. Chấp nhận 1.94 hoặc 1,94; không nói CPU nhanh hơn 40 lần cho mọi tác vụ."
+    },
+    {
+      "id": "Q26",
+      "category": "tong_hop",
+      "language": "vi",
+      "question": "Đối chiếu Selection Guide và mô tả cấu trúc MELSEC-L: có thể áp điều kiện dùng base unit dải nhiệt mở rộng để chạy tới 60 °C của iQ-R sang MELSEC-L không? Nêu căn cứ về cấu trúc lắp đặt và nhiệt độ được liệt kê cho L.",
+      "expected_answer": "Không có căn cứ trong catalogue để áp điều kiện đó sang L. Điều kiện tới 60 °C ở chú thích *15 thuộc iQ-R với base unit dải nhiệt mở rộng; cột MELSEC-L liệt kê 0–55 °C. Phần L mô tả cấu trúc baseless, không cần base unit và gắn trực tiếp lên thanh DIN.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 21 (đếm từ 1). Operating ambient temperature và chú thích *15 trang 10; integrated system bus structure trang 21.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        21
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Suy luận có điều kiện theo đúng dòng sản phẩm; không khẳng định đặc tính của thiết bị ngoài phạm vi catalogue."
+    },
+    {
+      "id": "Q27",
+      "category": "thieu_mo_ho_revision_xung_dot",
+      "language": "vi",
+      "question": "Chỉ dựa trên catalogue này, giá bán chính xác bằng VND của một CPU FX5U tại Việt Nam vào tháng 12/2022 là bao nhiêu?",
+      "expected_answer": "Catalogue không cung cấp giá bán bằng VND hay bảng giá cho CPU FX5U tại Việt Nam vào tháng 12/2022. Không đủ dữ liệu để đưa ra giá; cần bảng giá/báo giá phù hợp model và thời điểm.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 11, 22, 23, 24, 25, 50, 52 (đếm từ 1). Các trang sản phẩm iQ-F, phạm vi catalogue trang 50 và thông tin ấn phẩm trang 52; kiểm tra toàn văn 52 trang không có bảng giá.",
+      "expected_status": "abstain",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        11,
+        22,
+        23,
+        24,
+        25,
+        50,
+        52
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không được bịa số tiền. Không có một trang riêng chứng minh sự vắng mặt; các trang ghi ở đây là phạm vi đối chiếu. Nếu status=answered nhưng nội dung chỉ nói rõ không có dữ liệu, chấm thủ công hành vi từ chối theo nội dung, không coi status là accuracy."
+    },
+    {
+      "id": "Q28",
+      "category": "thieu_mo_ho_revision_xung_dot",
+      "language": "vi",
+      "question": "Thời gian thực thi lệnh MOV của PLC MELSEC là bao nhiêu ns?",
+      "expected_answer": "Cần hỏi người dùng muốn dòng/model nào; catalogue liệt kê nhiều giá trị khác nhau. Ví dụ iQ-R 1,96 ns, MELSEC-Q 3,9 ns, MELSEC-L 19 ns; các cột FX còn có giá trị khác. Không tự chọn một dòng để đưa ra một giá trị chung.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 10, 11 (đếm từ 1). Selection Guide, hàng MOV instruction (ns) xuyên hai trang.",
+      "expected_status": "clarification",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        10,
+        11
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Ưu tiên clarification. Một đáp án liệt kê đầy đủ và giải thích không có giá trị chung có thể hợp lý; cần review nội dung riêng. Không cộng/trung bình các dòng để đoán."
+    },
+    {
+      "id": "Q29",
+      "category": "thieu_mo_ho_revision_xung_dot",
+      "language": "vi",
+      "question": "Chỉ sử dụng file đang được cung cấp, hãy liệt kê chính xác các thông số MELSEC iQ-R đã thay đổi giữa ấn bản L(NA)08322ENG-J và revision ngay trước đó, kèm giá trị cũ và mới.",
+      "expected_answer": "Không thể xác định danh sách thay đổi hoặc giá trị cũ chỉ từ file này. File nhận diện L(NA)08322ENG-J, effective December 2022; không cung cấp bản revision trước hoặc bảng đối chiếu thay đổi để thực hiện yêu cầu. Cần bổ sung ấn bản trước/change log.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 52 (đếm từ 1). Mã ấn phẩm ở bìa sau; đối chiếu phạm vi toàn bộ file được cung cấp.",
+      "expected_status": "abstain",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        52
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Không suy ra revision trước chắc chắn là ENG-I và không tự tạo giá trị cũ. Ghi nhận abstain khi thiếu nguồn; clarification yêu cầu cung cấp bản trước hoặc answered chỉ giải thích thiếu nguồn có thể phù hợp về nội dung, cần review thủ công."
+    },
+    {
+      "id": "Q30",
+      "category": "thieu_mo_ho_revision_xung_dot",
+      "language": "vi",
+      "question": "Nhận định 'mọi CPU MELSEC-Q đều hỗ trợ điều khiển đồng bộ nhiều CPU với chu kỳ 0,88 ms, kể cả Q00UJ, Q00U, Q01U và Q02U' có được catalogue chứng minh không? Hãy kiểm tra cả chú thích.",
+      "expected_answer": "Không. Mục Multiple CPUs nêu chu kỳ 0,88 ms nhưng chú thích *1 loại trừ Q00UJ, Q00U, Q01U và Q02U. Vì vậy nhận định áp dụng cho mọi CPU, bao gồm bốn model đó, là sai theo catalogue.",
+      "reference": "59f1648f8fd3_000_l08322engj.pdf — trang PDF 19 (đếm từ 1). Multiple CPUs, đoạn mở đầu và chú thích *1 dưới sơ đồ.",
+      "expected_status": "answered",
+      "filters": {
+        "source_relative": "59f1648f8fd3_000_l08322engj.pdf"
+      },
+      "evidence_pages": [
+        19
+      ],
+      "review_status": "agent_source_reviewed_needs_human_review",
+      "scoring_notes": "Đây là kiểm tra giả định sai bằng phản ví dụ/chú thích, không phải hai nguồn thật sự mâu thuẫn; expected_status=answered, không ép conflict. Không suy ra mọi model còn lại đều được hỗ trợ."
+    }
+  ]
+}
